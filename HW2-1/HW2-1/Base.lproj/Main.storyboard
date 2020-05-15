@@ -657,7 +657,11 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="friendImageView" destination="Mj3-Te-MiW" id="0Ks-K2-MC1"/>
-                                            <outlet property="nameLabel" destination="NU2-Ix-nf2" id="dge-2m-3ug"/>
+                                            <outlet property="imagebottomconstrants" destination="bfO-Eb-DSt" id="FUc-7E-9rI"/>
+                                            <outlet property="imageheight" destination="GTd-H7-Ob1" id="3nA-sp-wTj"/>
+                                            <outlet property="imagetonameconstrants" destination="jhB-H2-O6K" id="cNp-LE-Vlv"/>
+                                            <outlet property="imagetopconstrants" destination="QOd-6Z-N9l" id="1fO-M2-9SS"/>
+                                            <outlet property="nameLabel" destination="NU2-Ix-nf2" id="738-Mm-Ucx"/>
                                             <outlet property="profileLabel" destination="EHl-wf-vus" id="3aY-2m-N78"/>
                                         </connections>
                                     </tableViewCell>

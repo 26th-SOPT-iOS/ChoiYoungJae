@@ -23,7 +23,7 @@ class FriendTableViewController: UIViewController {
     }
     
 private func setfriendsInformation() {
-let friend1 = FriendInformation(profileimage: .profile1, name: "영재", profile: "무무")
+let friend1 = FriendInformation(profileimage: .profile1, name: "영재", profile: "")
 let friend2 = FriendInformation(profileimage: .profile2, name: "버디", profile: "법법")
 let friend3 = FriendInformation(profileimage: .profile3, name: "명치", profile: "멍멍")
 let friend4 = FriendInformation(profileimage: .profile4, name: "뽀삐", profile: "월월")
@@ -55,6 +55,8 @@ extension FriendTableViewController: UITableViewDataSource{
         }
     }
     
+   
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let friends_number : String = "친구 \(friendinformation.count)"
         if section==1{
@@ -64,6 +66,7 @@ extension FriendTableViewController: UITableViewDataSource{
             return ""
         }
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let FriendCell = tableView.dequeueReusableCell(withIdentifier: FriendCell.identifier, for:
@@ -76,15 +79,27 @@ extension FriendTableViewController: UITableViewDataSource{
                                            name: myinformation[indexPath.row].name,
                                            profile: myinformation[indexPath.row].profile)
             
-                     
+//               FriendCell.friendImageView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+//               FriendCell.friendImageView.widthAnchor.constraint(equalToConstant: 60).isActive = true
+            FriendCell.imageheight.constant = 60
+            FriendCell.imagetopconstrants.constant = 13
+            FriendCell.imagebottomconstrants.constant = 15.5
+            FriendCell.imagetonameconstrants.constant = 13
         }
-        else {
+        else if indexPath.section==1 {
 
             FriendCell.setfriendsInformation(profileimage:
                 friendinformation[indexPath.row].profileimage.getImageName(),
                                            name: friendinformation[indexPath.row].name,
                                            profile: friendinformation[indexPath.row].profile)
-           
+//
+//            FriendCell.friendImageView.heightAnchor.constraint(equalToConstant: 10).isActive = true
+//            FriendCell.friendImageView.widthAnchor.constraint(equalToConstant: 10).isActive = true
+                       FriendCell.imageheight.constant = 50
+                       FriendCell.imagetopconstrants.constant = 6
+                       FriendCell.imagebottomconstrants.constant = 7
+                       FriendCell.imagetonameconstrants.constant = 22
+            
         }
     return FriendCell
 
@@ -97,7 +112,22 @@ extension FriendTableViewController: UITableViewDataSource{
     
 extension FriendTableViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-return 60
+if indexPath.section == 0 {
+          return 88.5
+      } else {
+          return 60
+      }
 }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+         
+         if section == 0 {
+             return 0
+         } else {
+             return 25
+         }
+     }
+  
+
 }
 

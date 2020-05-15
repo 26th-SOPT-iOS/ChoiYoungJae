@@ -15,6 +15,10 @@ class FriendCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var profileLabel: UILabel!
     
+    @IBOutlet weak var imageheight: NSLayoutConstraint!
+    @IBOutlet weak var imagetopconstrants: NSLayoutConstraint!
+    @IBOutlet weak var imagetonameconstrants: NSLayoutConstraint!
+    @IBOutlet weak var imagebottomconstrants: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
