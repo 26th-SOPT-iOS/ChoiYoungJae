@@ -18,7 +18,7 @@ class FriendTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setfriendsInformation()
-        friendTableView.datasource = self
+        friendTableView.dataSource = self
         friendTableView.delegate = self
     }
     
@@ -40,35 +40,58 @@ myinformation = [friend1]
 }
 
 extension FriendTableViewController: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-  
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section==0{
+            return myinformation.count
+        }
+        else{
+            return friendinformation.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let friends_number : String = "친구 \(friendinformation.count)"
+        if section==1{
+            return friends_number
+        }
+        else{
+            return ""
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let FriendCell = tableView.dequeueReusableCell(withIdentifier: FriendCell.identifier, for:
         indexPath) as? FriendCell else { return UITableViewCell() }
-    FriendCell.setfriendsInformation(profileimage:
-        friendinformation[indexPath.row].profileimage.getImageName(),
-                                   name: friendinformation[indexPath.row].name,
-                                   profile: friendinformation[indexPath.row].profile)
+        
+        if indexPath.section==0 {
+
+            FriendCell.setfriendsInformation(profileimage:
+                myinformation[indexPath.row].profileimage.getImageName(),
+                                           name: myinformation[indexPath.row].name,
+                                           profile: myinformation[indexPath.row].profile)
+            
+                     
+        }
+        else {
+
+            FriendCell.setfriendsInformation(profileimage:
+                friendinformation[indexPath.row].profileimage.getImageName(),
+                                           name: friendinformation[indexPath.row].name,
+                                           profile: friendinformation[indexPath.row].profile)
+           
+        }
     return FriendCell
-    
+
     }
 }
     
-//    else{  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//          guard let FriendCell = tableView.dequeueReusableCell(withIdentifier: FriendCell.identifier, for:
-//              indexPath) as? FriendCell else { return UITableViewCell() }
-//          FriendCell.setfriendsInformation(profileimage:
-//              friendinformation[indexPath.row].profileimage.getImageName(),
-//                                         name: friendinformation[indexPath.row].name,
-//                                         profile: friendinformation[indexPath.row].profile)
-//          return FriendCell
-//
-//    } }
-    
-    
+
     
 
     
