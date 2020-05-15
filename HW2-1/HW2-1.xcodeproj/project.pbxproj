@@ -18,6 +18,9 @@
 		06383076245BE03500527137 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06383075245BE03500527137 /* LoginViewController.swift */; };
 		06383078245BE05A00527137 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06383077245BE05A00527137 /* SigninViewController.swift */; };
 		0638307A245BE06600527137 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06383079245BE06600527137 /* ScrollViewController.swift */; };
+		068EC757246E6D470069D962 /* FriendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068EC756246E6D470069D962 /* FriendTableViewController.swift */; };
+		068EC759246E7E750069D962 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068EC758246E7E750069D962 /* FriendCell.swift */; };
+		068EC75B246E815E0069D962 /* FriendsInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068EC75A246E815E0069D962 /* FriendsInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		06383075245BE03500527137 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		06383077245BE05A00527137 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		06383079245BE06600527137 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		068EC756246E6D470069D962 /* FriendTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewController.swift; sourceTree = "<group>"; };
+		068EC758246E7E750069D962 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		068EC75A246E815E0069D962 /* FriendsInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,9 @@
 				06383075245BE03500527137 /* LoginViewController.swift */,
 				06383077245BE05A00527137 /* SigninViewController.swift */,
 				06383079245BE06600527137 /* ScrollViewController.swift */,
+				068EC756246E6D470069D962 /* FriendTableViewController.swift */,
+				068EC758246E7E750069D962 /* FriendCell.swift */,
+				068EC75A246E815E0069D962 /* FriendsInformation.swift */,
 			);
 			path = "HW2-1";
 			sourceTree = "<group>";
@@ -271,6 +280,9 @@
 				062639A624557CCF004F84BE /* ViewController.swift in Sources */,
 				062639A224557CCF004F84BE /* AppDelegate.swift in Sources */,
 				062639A424557CCF004F84BE /* SceneDelegate.swift in Sources */,
+				068EC759246E7E750069D962 /* FriendCell.swift in Sources */,
+				068EC757246E6D470069D962 /* FriendTableViewController.swift in Sources */,
+				068EC75B246E815E0069D962 /* FriendsInformation.swift in Sources */,
 				06383078245BE05A00527137 /* SigninViewController.swift in Sources */,
 				0638307A245BE06600527137 /* ScrollViewController.swift in Sources */,
 				06383076245BE03500527137 /* LoginViewController.swift in Sources */,
