@@ -78,7 +78,7 @@ extension FriendTableViewController: UITableViewDataSource{
                 myinformation[indexPath.row].profileimage.getImageName(),
                                            name: myinformation[indexPath.row].name,
                                            profile: myinformation[indexPath.row].profile)
-            
+            //사이즈를 조절하는 코드. 그러나 각각의 constatns들을 조정해줘야해서 우선 앞서 해놓은대로 IBOutlet과 연결
 //               FriendCell.friendImageView.heightAnchor.constraint(equalToConstant: 60).isActive = true
 //               FriendCell.friendImageView.widthAnchor.constraint(equalToConstant: 60).isActive = true
             FriendCell.imageheight.constant = 60
